@@ -5,14 +5,15 @@ using System.Text.Json;
 
 namespace HNGBackendOne.Controllers
 {
-    [Route("api/")]
+    //[Route("api/[controller]")]
+    [Route("api/hello")]
     [ApiController]
-    public class HomeController : ControllerBase
+    public class HelloController : ControllerBase
     {
         private readonly IHttpClientFactory _httpClientFactory;
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<HelloController> _logger;
 
-        public HomeController(IHttpClientFactory httpClientFactory, ILogger<HomeController> logger)
+        public HelloController(IHttpClientFactory httpClientFactory, ILogger<HelloController> logger)
         {
             _httpClientFactory = httpClientFactory;
             _logger = logger;
